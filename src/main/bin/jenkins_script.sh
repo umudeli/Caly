@@ -12,7 +12,7 @@ rm -r   /home/caly/caly/Caly*.sh
 
 rsync -avzh /mnt/nfs/var/nfsshare1 root@locahost:/var/lib/jenkins/jobs/CALY_JOB/workspace/applications/caly/target/lib/
 
---  copy file form mount (NFS folder) to weblogic
+--  copy file form mount (NFS folder) to application server
 
 cp   /mnt/nfs/var/nfsshare1  /home/caly/caly/
 
