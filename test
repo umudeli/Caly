@@ -61,3 +61,14 @@ MISSING_ADRESS("I1"),
   
   	@ManyToMany(mappedBy="accounts")
 	private List<CompensationFile>  compFile;  
+	
+	@PreUpdate
+    public void preUpdate() {
+		modificationDate = new Date();
+    }
+     
+    @PrePersist
+    public void prePersist() {
+        Date now = new Date();
+        creationDate = now;
+    }
